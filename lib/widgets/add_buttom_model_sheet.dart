@@ -8,7 +8,14 @@ class AddNoteButtomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomTextField(),
+        CustomTextField(hintText: 'Text'),
+        SizedBox(
+          height: 10,
+        ),
+        CustomTextField(
+          hintText: 'Contant',
+          maxLine: 7,
+        ),
       ],
     );
   }
