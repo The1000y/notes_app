@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomSearchIcon extends StatelessWidget {
-  const CustomSearchIcon({super.key});
-
+  const CustomSearchIcon({super.key, required this.icon});
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -18,8 +18,8 @@ class CustomSearchIcon extends StatelessWidget {
             height: 40,
             width: 40,
           ),
-          const Icon(
-            Icons.search,
+          Icon(
+            icon,
             color: Colors.white,
             size: 25,
           ),

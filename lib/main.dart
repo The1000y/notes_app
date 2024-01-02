@@ -5,6 +5,7 @@ void main() {
   runApp(const Notes_app());
 }
 
+// ignore: camel_case_types
 class Notes_app extends StatelessWidget {
   const Notes_app({super.key});
 
@@ -16,7 +17,7 @@ class Notes_app extends StatelessWidget {
         fontFamily: 'Poppins',
         brightness: Brightness.dark,
       ),
-      home: NotesView(),
+      home: const NotesView(),
     );
   }
 }

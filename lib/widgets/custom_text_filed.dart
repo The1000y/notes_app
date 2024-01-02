@@ -21,14 +21,17 @@ class CustomTextField extends StatelessWidget {
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(kPrimaryColor),
         hintText: hintText,
-        hintStyle: TextStyle(fontSize: 18, color: kPrimaryColor),
+        hintStyle: TextStyle(
+          fontSize: 18,
+          color: kPrimaryColor,
+        ),
       ),
     );
   }
 
   OutlineInputBorder buildBorder([Color? color]) {
     return OutlineInputBorder(
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(15),
         ),
         borderSide: BorderSide(color: color ?? Colors.white));
