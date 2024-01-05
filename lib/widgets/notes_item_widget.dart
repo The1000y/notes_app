@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:notes_app/model/note_model.dart';
 import 'package:notes_app/views/edit_note_view.dart';
 
@@ -40,10 +41,14 @@ class NotesItem extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 16),
                 child: Text(notes.subTitle,
                     style: TextStyle(
-                        color: Colors.black.withOpacity(0.6), fontSize: 18)),
+                        color:
+                            const Color.fromRGBO(0, 0, 0, 1).withOpacity(0.6),
+                        fontSize: 18)),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  notes.delete();
+                },
                 icon: const Icon(
                   FontAwesomeIcons.trash,
                   color: Color.fromARGB(255, 39, 24, 24),
