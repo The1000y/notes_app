@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/add_note_cubit/cubit/add_note_cubit.dart';
+import 'package:notes_app/helper/snakbar.dart';
 import 'package:notes_app/model/note_model.dart';
 import 'package:notes_app/widgets/color_list_view.dart';
 import 'package:notes_app/widgets/custom_buttom.dart';
@@ -65,6 +66,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                           color: Colors.blue.value);
 
                       BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
+                      snakBar(context, 'Note Added Successfully');
                     } else {
                       autovalidateMode = AutovalidateMode.always;
                       setState(() {});

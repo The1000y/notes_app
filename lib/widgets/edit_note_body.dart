@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/helper/snakbar.dart';
 
 import 'package:notes_app/model/note_model.dart';
 
@@ -34,6 +35,7 @@ class _EditNoteBodyState extends State<EditNoteBody> {
                 widget.note.subTitle = subTitle ?? widget.note.subTitle;
                 widget.note.save();
                 Navigator.pop(context);
+                snakBar(context, 'Note is Edited Successfully');
               },
               icon: FontAwesomeIcons.check,
               text: 'Edit Note'),
