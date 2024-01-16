@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:notes_app/model/note_model.dart';
+
 import 'package:notes_app/widgets/custom_app_bar_widget.dart';
 import 'package:notes_app/widgets/custom_text_filed.dart';
+import 'package:notes_app/widgets/edit_note_color_list.dart';
 
 class EditNoteBody extends StatefulWidget {
   const EditNoteBody({super.key, required this.note});
@@ -50,8 +54,12 @@ class _EditNoteBodyState extends State<EditNoteBody> {
               subTitle = value;
             },
             hintText: widget.note.subTitle,
-            maxLine: 10,
-          )
+            maxLine: 5,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          EditNoteColorList(notes: widget.note),
         ],
       ),
     );
